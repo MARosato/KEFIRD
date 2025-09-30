@@ -1,0 +1,599 @@
+:root {
+    --bs-body-bg: #A15426 !important;
+    --bs-primary: #814827 !important;
+    /* --bs-primary: #A45C32 !important; */
+    --bs-secondary-color: #F7E2C7 !important;
+    --bs-tertiary-bg: #161616 !important;
+    --bs-font-title: 'Figtree' !important;
+    /* --bs-calculator-fontsize: 1.2rem !important; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+head {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 * {
+    font-family: var(--bs-font-title) !important;
+    color: var(--bs-secondary-color) !important;
+    text-transform: uppercase;
+}
+
+a,
+h6,
+strong {
+    font-family: var(--bs-font-title) !important;
+    color: var(--bs-secondary-color) !important;
+    font-weight: 700 !important;
+    /* font-style: italic; */
+}
+
+p,
+ul,
+ol,
+small {
+    font-family: var(--bs-font-title) !important;
+    color: var(--bs-secondary-color) !important;
+    font-size: bolder !important;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.btn {
+    color: var(--bs-secondary-color) !important;
+    background-color: var(--bs-body-bg) !important;
+    border-color: var(--bs-secondary-color) !important;
+    font-weight: 400 !important;
+}
+
+.btn:hover,
+.btn svg:hover {
+    color: var(--bs-primary) !important;
+    background-color: var(--bs-secondary-color) !important;
+    border-color: var(--bs-secondary-color);
+    font-weight: 400 !important;
+}
+
+.bi {
+    color: var(--bs-secondary-color) !important;
+}
+
+/*  --------------------------------------
+    |             SCROLL BAR             |
+    --------------------------------------  */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bs-body-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs-tertiary-bg);
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } */
+
+/*  -------------------------------------
+    |             M E D I A             |
+    -------------------------------------  */
+
+/* Escritorio */
+@media only screen and (min-width: 1024px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    /* #home {
+        margin-top: 40px;
+    } */
+
+    #meeting-points .list-group-item {
+        width: 88%;
+        text-align: center;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 70px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    #meeting-points .list-group-item {
+        width: 100%;
+    }
+}
+
+/* Celulares */
+@media only screen and (max-width: 767px) {
+    body {
+        margin: 0 auto;
+    }
+
+    nav .navbar-nav {
+        margin-top: 1vh;
+    }
+
+    nav .navbar-buttons .btn {
+        color: var(--bs-secondary-color) !important;
+        padding: 1.3vh;
+    }
+
+    #home .home-body,
+    #home .home-body .container-fluid {
+        padding: 3vh !important;
+        text-wrap: balance !important;
+        margin-top: 1vh;
+    }
+
+    #about .about-body .container-fluid,
+    #types .types-body .container-fluid,
+    #FAQS .FAQs-body .container-fluid {
+        padding: 0vh !important;
+        text-wrap: balance !important;
+    }
+
+    #about .about-body,
+    #about .about-card {
+        padding: 4vh !important;
+        text-wrap: balance !important;
+    }
+
+    #kefir-water .kefir-water-card,
+    #kefir-milk .kefir-milk-card {
+        padding: 4vh !important;
+        padding-top: 6vh !important;
+    }
+
+    #meeting-points .meeting-body {
+        padding: 2.5vh !important;
+    }
+
+    #meeting-points #searchForm .form-text {
+        text-align: center;
+        margin-top: 0vh !important;
+    }
+
+    #calculator .form-text {
+        text-align: center !important;
+    }
+}
+
+/*  ---------------------------------------
+    |             N A V B A R             |
+    ---------------------------------------  */
+
+nav {
+    background-color: var(--bs-body-bg);
+}
+
+nav .navbar-brand {
+    color: var(--bs-secondary-color);
+    letter-spacing: 0.06em;
+}
+
+nav .navbar-brand:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
+
+nav .nav-link {
+    color: var(--bs-secondary-color);
+    font-size: large;
+}
+
+nav .nav-link:hover {
+    color: var(--bs-tertiary-bg) !important;
+    font-size: large;
+}
+
+nav .nav-link svg {
+    color: var(--bs-secondary-color);
+    width: 24px;
+    height: 24px;
+}
+
+nav .navbar-icon svg {
+    color: var(--bs-secondary-color);
+    height: 30px;
+    cursor: pointer;
+}
+
+nav .navbar-toggler {
+    color: var(--bs-secondary-color) !important;
+    border-color: var(--bs-secondary-color);
+    border: none;
+}
+
+/* NAVBAR BUTTONS */
+nav .navbar-buttons .btn {
+    color: var(--bs-secondary-color) !important;
+}
+
+nav .navbar-buttons .btn:hover {
+    background-color: var(--bs-secondary-color) !important;
+    color: var(--bs-primary) !important;
+    font-weight: bold !important;
+}
+
+/*  -----------------------------------
+    |             H O M E             |
+    -----------------------------------  */
+
+/* FONDO DE HOME-BACKGROUND*/
+
+#home .home-body {
+    position: relative;
+}
+
+#home .home-body .home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#home .home-body .home-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    opacity: 0.2;
+}
+
+.disclaimer {
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/*  -------------------------------------
+    |             A B O U T             |
+    -------------------------------------  */
+
+#about .about-body,
+#about .about-card {
+    background-color: var(--bs-primary) !important;
+}
+
+#about .about-body p {
+    text-wrap: wrap !important;
+}
+
+/*  -------------------------------------
+    |             T Y P E S             |
+    -------------------------------------  */
+
+/* #types .types-body {
+    background-image: url('https://t1.uc.ltmcdn.com/es/posts/3/8/1/como_conservar_el_kefir_45183_orig.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+#types .types-card {
+    background-color: var(--bs-primary) !important;
+}
+
+#types .types-body {
+    position: relative;
+}
+
+#types .types-body .types-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#types .types-body .types-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    opacity: 0.3;
+}
+
+#types .warning {
+    font-family: var(--bs-font-title) !important;
+    font-style: italic !important;
+    /* font-weight: 500 !important; */
+    text-align: center;
+}
+
+/*  -----------------------------------------------
+    |             K E F I R - M I L K             |
+    -----------------------------------------------  */
+
+#kefir-milk .kefir-milk-body {
+    background-image: url('https://t1.uc.ltmcdn.com/es/posts/3/8/1/como_conservar_el_kefir_45183_orig.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+#kefir-milk .kefir-milk-card {
+    background-color: var(--bs-primary) !important;
+}
+
+#kefir-milk .kefir-milk-card h2,
+#kefir-milk .kefir-milk-card p {
+    text-align: center !important;
+}
+
+#kefir-milk .warning {
+    font-style: italic !important;
+    font-weight: 700 !important;
+}
+
+/*  -------------------------------------------------
+    |             K E F I R - W A T E R             |
+    -------------------------------------------------  */
+
+#kefir-water .kefir-water-body {
+    background-image: url('https://blog.lodeperez.com/wp-content/uploads/2019/01/nodulos-de-kefir-de-agua-probioticos-lo-de-perez.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+#kefir-water .kefir-water-card {
+    background-color: var(--bs-primary) !important;
+}
+
+#kefir-water .kefir-water-card h2,
+#kefir-water .kefir-water-card p {
+    text-align: center !important;
+}
+
+#kefir-water .warning {
+    font-style: italic !important;
+    font-weight: 700 !important;
+}
+
+/*  -----------------------------------------------
+    |             C A L C U L A T O R             |
+    -----------------------------------------------  */
+
+#calculator .calculator-body {
+    background-color: var(--bs-primary) !important;
+}
+
+#calculator .calculator-body h1,
+#calculator .calculator-body p {
+    text-align: center !important;
+}
+
+/* #calculator #kefirForm .btn {
+        background-color: var(--bs-primary) !important;
+    } */
+
+
+#calculator .kefirForm .form-label {
+    color: var(--bs-secondary-color) !important;
+    /* height: 120px; */
+}
+
+#calculator .kefirForm .form-control {
+    color: var(--bs-secondary-color) !important;
+    text-wrap: wrap;
+    font-weight: 500;
+}
+
+/* #calculator .kefirForm .form-floating input {
+    font-size: 1.3rem !important;
+    height: 90px !important;
+}
+
+#calculator .kefirForm .form-floating label {
+    color: var(--bs-secondary-color);
+    font-size: 1rem !important;
+    text-wrap: wrap;
+}
+
+#calculator .kefirForm .form-floating select {
+    color: var(--bs-tertiary-bg);
+    font-size: var(--bs-calculator-fontsize);
+}
+
+#calculator .kefirForm .form-floating .form-select,
+#calculator .kefirForm .form-floating input {
+    height: 80px;
+} */
+
+/*  -------------------------------------------------------
+    |             M E E T I N G - P O I N T S             |
+    -------------------------------------------------------  */
+
+#meeting-points .meeting-body {
+    background-color: var(--bs-primary) !important;
+}
+
+#meeting-points .meeting-body h1,
+#meeting-points .meeting-body p {
+    text-align: center;
+}
+
+#meeting-points #searchForm {
+    margin: 0 auto;
+    color: var(--bs-secondary-color) !important;
+}
+
+#meeting-points #searchForm input,
+#meeting-points #searchForm #inputType {
+    color: var(--bs-secondary-color) !important;
+}
+
+#meeting-points .list-group-item {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--bs-primary);
+    color: var(--bs-secondary-color);
+}
+
+#meeting-points .list-group-item:hover {
+    background-color: var(--bs-body-bg);
+}
+
+#meeting-points #errorMessage {
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-secondary-color) !important;
+    text-transform: uppercase !important;
+    font-style: italic;
+}
+
+/*  -------------------------------------
+    |             S T O R E             |
+    -------------------------------------  */
+
+#cartButton {
+    z-index: 1050;
+}
+
+#cartModal .modal-content {
+    color: var(--bs-secondary-color) !important;
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-secondary-color) !important;
+}
+
+/*  -----------------------------------
+    |             F A Q s             |
+    -----------------------------------  */
+
+/* #FAQs .FAQs-body {
+    background-image: url('https://www.evalandgo.com/wp-content/uploads/2024/03/pexels-photo-5428836.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+} */
+
+.FAQs-body {
+    position: relative;
+}
+
+.FAQs-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.FAQs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    opacity: 0.5;
+}
+
+/* ACCORDION */
+
+#FAQs .accordion-button {
+    background-color: var(--bs-primary);
+    color: var(--bs-secondary-color);
+    font-size: large;
+}
+
+#FAQs .accordion-button:hover {
+    background-color: var(--bs-body-bg);
+}
+
+#FAQs .accordion-collapse {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-secondary-color);
+}
+
+/* #FAQs .accordion-button {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-secondary-color) !important;
+    font-size: large !important;
+}
+
+#FAQs .accordion-button:hover {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-secondary-color) !important;
+}
+
+#FAQs .accordion-collapse {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--accordion-collapse-text-color);
+} */
+
+/*  ---------------------------------------
+    |             F O O T E R             |
+    ---------------------------------------  */
+
+footer {
+    background-color: var(--bs-primary);
+}
+
+footer h5 {
+    color: var(--bs-secondary-color) !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
+
+footer a svg:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
+
+footer .footer-credits {
+    font-style: italic;
+}
+
+footer .footer-credits:hover {
+    color: var(--bs-tertiary-bg) !important;
+}

@@ -1,0 +1,301 @@
+:root {
+    --bs-body-bg: #A15426 !important;
+    --bs-primary: #814827 !important;
+    /* --bs-primary: #A45C32 !important; */
+    --bs-secondary-color: #F7E2C7 !important;
+    --bs-tertiary-bg: #161616 !important;
+    --bs-font-title: 'Figtree' !important;
+    /* --bs-calculator-fontsize: 1.2rem !important; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+head {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 * {
+    font-family: var(--bs-font-title) !important;
+    color: var(--bs-secondary-color) !important;
+    text-transform: uppercase;
+}
+
+a,
+h6,
+strong {
+    font-family: var(--bs-font-title) !important;
+    color: var(--bs-secondary-color) !important;
+    font-weight: 700 !important;
+    /* font-style: italic; */
+}
+
+p,
+ul,
+ol,
+small {
+    font-family: var(--bs-font-title) !important;
+    color: var(--bs-secondary-color) !important;
+    font-size: bolder !important;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.btn {
+    color: var(--bs-secondary-color) !important;
+    background-color: var(--bs-body-bg) !important;
+    border-color: var(--bs-secondary-color) !important;
+    font-weight: 400 !important;
+}
+
+.btn:hover,
+.btn svg:hover {
+    color: var(--bs-primary) !important;
+    background-color: var(--bs-secondary-color) !important;
+    border-color: var(--bs-secondary-color);
+    font-weight: 400 !important;
+}
+
+.bi {
+    color: var(--bs-secondary-color) !important;
+}
+
+/*  --------------------------------------
+    |             SCROLL BAR             |
+    --------------------------------------  */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bs-body-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs-tertiary-bg);
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } */
+
+/*  -------------------------------------
+    |             M E D I A             |
+    -------------------------------------  */
+
+/* Escritorio */
+@media only screen and (min-width: 1024px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    /* #home {
+        margin-top: 40px;
+    } */
+
+    #meeting-points .list-group-item {
+        width: 88%;
+        text-align: center;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 70px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    #meeting-points .list-group-item {
+        width: 100%;
+    }
+}
+
+/* Celulares */
+@media only screen and (max-width: 767px) {
+    body {
+        margin: 0 auto;
+    }
+
+    nav .navbar-nav {
+        margin-top: 1vh;
+    }
+
+    nav .navbar-buttons .btn {
+        color: var(--bs-secondary-color) !important;
+        padding: 1.3vh;
+    }
+
+    #home .home-body,
+    #home .home-body .container-fluid {
+        padding: 3vh !important;
+        text-wrap: balance !important;
+        margin-top: 1vh;
+    }
+
+    #about .about-body .container-fluid,
+    #types .types-body .container-fluid,
+    #FAQS .FAQs-body .container-fluid {
+        padding: 0vh !important;
+        text-wrap: balance !important;
+    }
+
+    #about .about-body,
+    #about .about-card {
+        padding: 4vh !important;
+        text-wrap: balance !important;
+    }
+
+    #kefir-water .kefir-water-card,
+    #kefir-milk .kefir-milk-card {
+        padding: 4vh !important;
+        padding-top: 6vh !important;
+    }
+
+    #meeting-points .meeting-body {
+        padding: 2.5vh !important;
+    }
+
+    #meeting-points #searchForm .form-text {
+        text-align: center;
+        margin-top: 0vh !important;
+    }
+
+    #calculator .form-text {
+        text-align: center !important;
+    }
+}
+
+/*  ---------------------------------------
+    |             N A V B A R             |
+    ---------------------------------------  */
+
+nav {
+    background-color: var(--bs-body-bg);
+}
+
+nav .navbar-brand {
+    color: var(--bs-secondary-color);
+    letter-spacing: 0.06em;
+}
+
+nav .navbar-brand:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
+
+nav .nav-link {
+    color: var(--bs-secondary-color);
+    font-size: large;
+}
+
+nav .nav-link:hover {
+    color: var(--bs-tertiary-bg) !important;
+    font-size: large;
+}
+
+nav .nav-link svg {
+    color: var(--bs-secondary-color);
+    width: 24px;
+    height: 24px;
+}
+
+nav .navbar-icon svg {
+    color: var(--bs-secondary-color);
+    height: 30px;
+    cursor: pointer;
+}
+
+nav .navbar-toggler {
+    color: var(--bs-secondary-color) !important;
+    border-color: var(--bs-secondary-color);
+    border: none;
+}
+
+/* NAVBAR BUTTONS */
+nav .navbar-buttons .btn {
+    color: var(--bs-secondary-color) !important;
+}
+
+nav .navbar-buttons .btn:hover {
+    background-color: var(--bs-secondary-color) !important;
+    color: var(--bs-primary) !important;
+    font-weight: bold !important;
+}
+
+/*  -------------------------------------
+    |             S T O R E             |
+    -------------------------------------  */
+
+#cartButton {
+    z-index: 1050;
+}
+
+#cartModal .modal-content {
+    color: var(--bs-secondary-color) !important;
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-secondary-color) !important;
+}
+
+/*  ---------------------------------------
+    |             F O O T E R             |
+    ---------------------------------------  */
+
+footer {
+    background-color: var(--bs-primary);
+}
+
+footer h5 {
+    color: var(--bs-secondary-color) !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
+
+footer a svg:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
+
+footer .footer-credits {
+    font-style: italic;
+}
+
+footer .footer-credits:hover {
+    color: var(--bs-tertiary-bg) !important;
+}
